@@ -107,4 +107,31 @@
 --AND title NOT LIKE '%analytics%';
 
 --There are 4 different job titles that does not contain either the word 'Analyst' or 'Analytics'
- 
+
+--SELECT skill,domain, days_since_posting
+--FROM public.data_analyst_jobs
+--WHERE days_since_posting > '21' 
+--AND skill='SQL';
+
+--15 job titles.--
+
+SELECT skill,domain, days_since_posting
+FROM public.data_analyst_jobs
+WHERE days_since_posting > '21' 
+AND skill='SQL'
+AND domain IS NOT NULL;
+
+--11 job titles--
+
+SELECT skill,domain, days_since_posting
+FROM public.data_analyst_jobs
+WHERE days_since_posting > '21' 
+AND skill='SQL'
+AND domain IS NOT NULL
+ORDER BY days_since_posting DESC;
+
+-ALL ARE TIED AT 30 EXCEPT FOR 1--
+TOP 3 Consulting and Business Services 
+
+
+
